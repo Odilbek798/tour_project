@@ -7,14 +7,30 @@ const Header = () => {
     <div>
         <header>
             <div className="nav">
+                <div className="logo">
+                    LOGO
+                </div>
+                <div className="links">
+                    <a href="">
                 <Link to={'/'}>Home</Link>
+                    </a>
+                    <a href="">
                 <Link to={'/'}>Recomendations</Link>
+                    </a>
+                    <a href="">
                 <Link to={'/'}>Tickets</Link>
+                    </a>
+                </div>
+                <div className="other">
                 <button>
+                    <a href="">
                     <Link to={'/'}>Contact</Link>
+                    </a>
                 </button>
+
                 <div className="menu">
                     <BurgerMenu/>
+                </div>
                 </div>
             </div>
         </header>

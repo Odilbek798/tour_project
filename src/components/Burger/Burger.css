@@ -48,9 +48,11 @@
   
   .fullscreen-menu {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 40%;
+    top: 60px;
+    border: 1px solid black;
+    border-radius: 10px;
+    right: 130px;
+    width: 10%;
     height: 20%;
     /* // background-color: rgba(0, 0, 0, 0.9); */
     background-color: white;
@@ -75,7 +77,7 @@
   .menu-content a {
     display: block;
     color: black;
-    font-size: 2rem;
+    font-size: 25px;
     text-decoration: none;
     margin: 20px 0;
     transition: color 0.3s ease;
