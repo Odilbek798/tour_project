@@ -1,15 +1,16 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ; */
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 .main_first{
     padding-top: 70px;
     h1{
         margin: 0 auto;
         color: white;
-        font-size: 90px;
-        font-weight: 100;
+        font-size: 100px;
+        font-weight: 10;
     }
     /* margin-top: -100px; */
     height: 100dvh;
@@ -21,12 +22,19 @@
 .text{
     display: flex;
     padding-top: 150px;
+    margin: 0 auto;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    max-width: 1000px;
+    h1{
+        /* font-weight: 10; */
+    }
 }
 .simple_section{
     margin: 30px 0;
     display: flex;
+    font-weight: 100;
     height: 90dvh;
     color: white;
     font-size: 35px;
@@ -38,6 +46,7 @@
 .half_image{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 100px;
     gap: 40px;
     justify-content: center;
@@ -55,6 +64,7 @@
         border-radius: 20px;
     }
 }
+
 .text_side{
     display: flex;
     gap: 20px;
@@ -99,4 +109,66 @@
         height: 45px;
         width: 200px;
     }
+}
+.text1{
+    display: flex;
+    padding: 20px;
+    margin: 20px 0;
+    height: 90dvh;
+    justify-content: space-around;
+    background-color: aliceblue;
+}
+.up{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 500px;
+    h1{
+        font-size: 80px;
+    }
+    button{
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px 20px;
+    }
+}
+.low{
+    display: flex;
+    align-items: flex-end;
+    font-size: 20px;
+    text-wrap: wrap;
+    max-width: 350px;
+}
+.connect1{
+    height: 100dvh;
+    display: flex;
+    background-color: #0a254d;
+}
+.connect{
+    padding-top: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+    max-width: 900px;
+    color: white;
+    h1{
+        font-weight: 100;
+        font-size: 60px;
+    }
+    p{
+        font-size: 20px;
+    }
+    button{
+        padding: 20px 30px;
+        max-width: 150px;
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px auto;
+    }
+
 }
