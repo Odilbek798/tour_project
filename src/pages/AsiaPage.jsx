@@ -1,5 +1,5 @@
+import Footer from "../components/Footer/Footer";
 import ToursGrid from "../components/ToursGrid";
-import Footer from "../components/Footer";
 
 export default function AsiaPage() {
   return (

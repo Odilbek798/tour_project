@@ -1,23 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/Header/Header'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import Footer from '../components/Footer/Footer'
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, 
+      easing: 'ease-in-out', 
+      once: true,  
+    });
+  }, []);
   return (
     <div>
         <section className='main_first'>
+          <div data-aos="fade-down">
           <Header/>
+          </div>
           <div className="text">
-            <h1>Everything is open with IT TOUR</h1>
+            <h1 data-aos="fade-up">Everything is open with IT TOUR</h1>
           </div>
         </section>
         <section>
           /card/
         </section>
         <section className="simple_section">
-          <h1>IT TOUR — bu qulaylik, ishonch va unutilmas sayohatlar demakdir. Biz sizga dunyoning eng go‘zal maskanlariga sifatli va hamyonbop sayohatlarni taklif qilamiz.</h1>
+          <h1 data-aos="fade-up">IT TOUR — bu qulaylik, ishonch va unutilmas sayohatlar demakdir. Biz sizga dunyoning eng go‘zal maskanlariga sifatli va hamyonbop sayohatlarni taklif qilamiz.</h1>
         </section>
-        <section className="half_image">
+        <section className="half_image"  data-aos="fade-up-right">
           <div className="img_side">
-            <img src="./half1.jpg" alt="" />
+            <img className='img' src="./half1.jpg" alt="" />
           </div>
           <div className="text_side">
             <h1>Sayohat qilish nega muhim?</h1>
@@ -27,7 +39,7 @@ Bugungi kunda sayohat qilish har qachongidan ham oson. Professional tour kompani
             <button>Ko'proq organish</button>
           </div>
         </section>
-        <section className="half_image reverse">
+        <section className="half_image reverse"  data-aos="fade-up-left">
           <div className="img_side">
             <img src="./half2.jpg" alt="" />
           </div>
@@ -46,15 +58,31 @@ Biz bilan qulay, ishonchli va unutilmas sayohatlarni kashf eting. </h2>
             <button>Ko'proq organish</button>
           </div>
         </section>
-        <section className="text">
-          <div className="Up">
+        <section className="text1">
+          <div className="up" data-aos="zoom-out-right">
             <h1>Sayohat loyihangizni bizga ishonib topshiring!</h1>
             <button>Ko'proq o'rganish</button>
           </div>
-          <div className="low">
-            <p>Har yili IT TOUR jamoasi 500 dan xaridorlanri chet elga  . Ushbu klub eng yaxshi hamkorlarimizning sadoqatini va ish faoliyatini taqdirlaydi.</p>
+          <div className="low" data-aos="zoom-out-left">
+            <p>Har yili IT TOUR jamoasi 500 dan xaridorlanri chet elga jonatadi. Bizning jamoamiz sizga ishonch va comfortni kafolatlaydi. Bizga ishoning va biz sizning ishonchngizni oqlaymiz.</p>
           </div>
         </section>
+        <section className="connect1">
+          <div className="connect"  data-aos="fade-up">
+          <h1>
+          Qo'shimcha ma'lumot o'rganmoqchi bo'lsangiz biz bilan bog'laning.
+          </h1>
+          <p>
+          Maxsus takliflarimiz, yangi mahsulotlarimiz va eksklyuziv aksiyalarimiz haqida xabardor bo'lib turing va o'tkazib yubormang!.
+          </p>
+          <button>
+            O'rganish
+          </button>
+          </div>
+        </section>
+        <div data-aos="zoom-in">
+        <Footer/> 
+        </div>
     </div>
   )
 }

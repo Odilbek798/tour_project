@@ -23,6 +23,9 @@ const Burger = () => {
                 <Link to="/" element={<Home/>} >
                 <a href="">HOME</a>
                 </Link>
+                <Link to="/" element={<Home/>} >
+                <a href="">HOME</a>
+                </Link>
                 
         </div>
       </div>

@@ -1,6 +1,10 @@
+
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
+import ToursGrid from "../components/ToursGrid"
+import Footer from "../components/Footer/Footer";
 import ToursGrid from "../components/ToursGrid";
+
 
 const AfricaPage = () => {
   return (
