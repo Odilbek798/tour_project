@@ -20,6 +20,19 @@ const Header = () => {
                     <a href="">
                 <Link to={'/'}>Tickets</Link>
                     </a>
+                    
+                
+                   
+
+      
+        <Link to="/africa">Africa</Link>
+        <Link to="/asia">Asia</Link>
+        <Link to="/europe">Europe</Link>
+      
+
+
+
+
                 </div>
                 <div className="other">
                 <button>
