@@ -14,7 +14,7 @@ export default function Footer() {
             Portail des agents
           </button>
         </div>
-
+        
         <div>
           <h4 className="footer-title">Быстрые ссылки</h4>
           <ul className="footer-list">
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-copy">
-          © 2026 Tours Chanteclerc
+          © 2026 Tours
         </div>
 
       </div>
