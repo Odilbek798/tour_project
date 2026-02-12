@@ -1,13 +1,20 @@
-import Footer from "../components/Footer/Footer";
-import ToursGrid from "../components/ToursGrid";
-// import Footer from "../components/Footer";
 
-export default function AfricaPage() {
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer";
+import ToursGrid from "../components/ToursGrid";
+
+
+const AfricaPage = () => {
   return (
     <>
-      {/* HERO + FILTERS (у тебя уже есть) */}
+      <Header />
+      <h1 style={{ textAlign: "center", marginTop: "40px" }}>
+        Africa Tours
+      </h1>
       <ToursGrid />
       <Footer />
     </>
   );
-}
+};
+
+export default AfricaPage;
