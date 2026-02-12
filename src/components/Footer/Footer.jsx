@@ -7,10 +7,10 @@ export default function Footer() {
         
         <div>
           <h4 className="footer-title">TOURS CHANTECLERC</h4>
-          <button className="btn btn-dark">
+          <button className="btn2 btn-dark">
             Espace voyageurs
           </button>
-          <button className="btn btn-blue">
+          <button className="btn2 btn-blue">
             Portail des agents
           </button>
         </div>
