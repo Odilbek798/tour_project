@@ -19,6 +19,20 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.second{
+    padding-top: 70px;
+    h1{
+        margin: 0 auto;
+        color: white;
+        font-size: 100px;
+        font-weight: 10;
+    }
+    height: 100dvh;
+    background-image: url(/plane.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .text{
     display: flex;
     padding-top: 150px;
@@ -27,9 +41,7 @@
     align-items: center;
     justify-content: center;
     max-width: 1000px;
-    h1{
-        /* font-weight: 10; */
-    }
+
 }
 .simple_section{
     margin: 30px 0;
@@ -171,4 +183,38 @@
         margin: 10px auto;
     }
 
+}
+.text_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    button{
+        padding: 20px 30px;
+        max-width: 250px;
+        background-color: white;
+        border-radius: 20px;
+        margin: 10px auto;
+    }
+}
+.text_cards{
+    align-items: center;
+    margin: 50px 0;
+    justify-content: center;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.tickets{
+    background-color: aliceblue;
 }

@@ -2,7 +2,9 @@ import React from 'react'
 
 const Rec = () => {
   return (
-    <div>Rec</div>
+    <div>
+      All recomendations
+    </div>
   )
 }
 

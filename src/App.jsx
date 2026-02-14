@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import AfricaPage from "./pages/AfricaPage";
 import Rec from './pages/Rec';
+import Tickets from './pages/Tickets';
+import TicketDetails from './pages/TicketDetails';
 
 function App() {
   return (
@@ -11,8 +13,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/rec' element={<Rec/>}/>
+        <Route path='/tickets' element={<Tickets/>}/>
          <Route path="/africa" element={<AfricaPage />} />
-    
+    <Route path="/tickets/:id" element={<TicketDetails />} />
+
 
       </Routes>
     </div>
@@ -20,17 +24,3 @@ function App() {
 }
 
 export default App
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
