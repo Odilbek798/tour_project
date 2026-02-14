@@ -1,5 +1,8 @@
 import TourCard from "./TourCard";
 import "./ToursGrid.css";
+import "./Hero.css"
+
+
 
 const ToursGrid = () => {
   const tours = [

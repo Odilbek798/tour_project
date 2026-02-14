@@ -26,8 +26,7 @@ const Header = () => {
 
       
         <Link to="/africa">Africa</Link>
-        <Link to="/asia">Asia</Link>
-        <Link to="/europe">Europe</Link>
+        
       
 
 
