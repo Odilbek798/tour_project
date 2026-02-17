@@ -11,7 +11,12 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+<<<<<<< HEAD
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+=======
     "axios": "^1.13.5",
+>>>>>>> bad1079cc026599e24f5528dc90c4e1abd3aa908
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.12.0",
