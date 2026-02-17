@@ -1,5 +1,6 @@
 import TourCard from "./TourCard";
 import "./ToursGrid.css";
+import "./Hero.css"
 
 const ToursGrid = () => {
   const tours = [
@@ -45,9 +46,7 @@ const ToursGrid = () => {
       days: 9,
       price: 3650,
     },
-   
   ];
-
   return (
     <div className="tours-grid">
       {tours.map((tour, i) => (
