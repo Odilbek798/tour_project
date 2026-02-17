@@ -37,6 +37,15 @@ export default function Footer() {
 
         <div className="footer-copy">
           © 2026 Tours
+              <h4 className="footer-title">Способы оплаты</h4>
+  <div className="payment-icons">
+    <img src="/payments/visa.png" alt="Visa" />
+    <img src="/payments/mastercard.png" alt="MasterCard" />
+    <img src="/payments/uzcard.png" alt="Uzcard" />
+    <img src="/payments/humo.png" alt="Humo" />
+    <img src="/payments/payme.png" alt="Payme" />
+    <img src="/payments/click.png" alt="Click" />
+  </div>
         </div>
 
       </div>
