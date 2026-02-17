@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import Cards from "../components/Cards/Cards";
 
-const Rec = () => {
-  return (
+
+function Rec() {
+  return(
     <div>
-      All recomendations
+      yuio
     </div>
-  )
+  );
+  
 }
 
-export default Rec
+export default Rec;
