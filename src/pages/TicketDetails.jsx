@@ -114,91 +114,11 @@ Bugunoq sayohatingizni rejalashtiring — ertangi xotiralar bugundan boshlanadi 
           </div>
         </section>
 
-  {/* Tags */}
-  {tour.tags?.length > 0 && (
-    <div>
-      <h2>Tags</h2>
-      <div>
-        {tour.tags.map((tag, i) => (
-          <span key={i}>
-            #{tag}
-          </span>
-        ))}
-      </div>
-    </div>
-  )}
 
-  {/* Available Countries */}
-  {tour.availableCountries?.length > 0 && (
-    <div>
-      <h2>Available Countries</h2>
-      <ul>
-        {tour.availableCountries.map((country, i) => (
-          <li key={i}>{country}</li>
-        ))}
-      </ul>
-    </div>
-  )}
-
-  {/* Meta Keywords */}
-  {tour.metaKeywords?.length > 0 && (
-    <div>
-      <h2>Meta Keywords</h2>
-      <div>
-        {tour.metaKeywords.map((kw, i) => (
-          <span key={i}>
-            {kw}
-          </span>
-        ))}
-      </div>
-    </div>
-  )}
-
-  {/* Gallery */}
-  {tour.gallery?.length > 0 && (
-    <div>
-      <h2>Gallery</h2>
-      <div>
-        {tour.gallery.map((img, i) => (
-          <img
-            key={i}
-            src={img}
-            alt={`gallery-${i}`}
-          />
-        ))}
-      </div>
-    </div>
-  )}
-
-  {/* Reviews */}
-  {tour.reviews?.length > 0 && (
-    <div>
-      <h2>Reviews</h2>
-      <ul>
-        {tour.reviews.map((review, i) => (
-          <li key={i}>{review}</li>
-        ))}
-      </ul>
-    </div>
-  )}
-
-  {/* Bookings */}
-  {tour.bookings?.length > 0 && (
-    <div>
-      <h2>Bookings</h2>
-      <ul>
-        {tour.bookings.map((booking, i) => (
-          <li key={i}>{booking}</li>
-        ))}
-      </ul>
-    </div>
-  )}
-
-  {/* Footer Dates */}
-  <div>
+  {/* <div>
     <p>Created: {new Date(tour.createdAt).toLocaleString()}</p>
     <p>Updated: {new Date(tour.updatedAt).toLocaleString()}</p>
-  </div>
+  </div> */}
   <Footer/>
 </div>
 

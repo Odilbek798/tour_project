@@ -24,7 +24,7 @@ const Header = () => {
                 <div className="other">
                 <button>
                     <a href="">
-                    <Link to={'/'}>Contact</Link>
+                    <Link to={'/contact'}>Contact</Link>
                     </a>
                 </button>
 

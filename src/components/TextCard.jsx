@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const TextCard = ({ title, text, tags, route, image }) => {
+const TextCard = ({ title, text, tags, route, labelImage }) => {
+  console.log(labelImage);
   return (
     <div>
       <div className="carrd"
       style={{
-        backgroundImage: "url('/view.jpg')",
+        backgroundImage: `url(${labelImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

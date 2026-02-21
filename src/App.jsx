@@ -2,10 +2,11 @@ import React from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import AfricaPage from "./pages/AfricaPage";
+// import AfricaPage from "./pages/AfricaPage";
 import Rec from './pages/Rec';
 import Tickets from './pages/Tickets';
 import TicketDetails from './pages/TicketDetails';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/rec' element={<Rec/>}/>
+        <Route path='/contact' element={<Contact/>}/>
         <Route path='/tickets' element={<Tickets/>}/>
-         <Route path="/africa" element={<AfricaPage />} />
+         {/* <Route path="/africa" element={<AfricaPage />} /> */}
     <Route path="/tickets/:id" element={<TicketDetails />} />
 
 

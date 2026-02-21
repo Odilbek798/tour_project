@@ -5,28 +5,28 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         
-        <div>
-          <h4 className="footer-title">TOURS CHANTECLERC</h4>
-          <button className="btn2 btn-dark">
-            Espace voyageurs
+        <div className="buttons">
+          <h4 className="footer-title">IT TOUR</h4>
+          <button className="bton btn-dark">
+            Recomendations
           </button>
-          <button className="btn2 btn-blue">
-            Portail des agents
+          <button className="bton btn-blue">
+            Contact
           </button>
         </div>
-        
+
         <div>
-          <h4 className="footer-title">Быстрые ссылки</h4>
+          <h4 className="footer-title">Turli xil ma'lumotlar</h4>
           <ul className="footer-list">
-            <li>À propos</li>
-            <li>Emplois</li>
-            <li>Actualités</li>
-            <li>Brochures</li>
+            <li>Qoshimcha ma'lumotlar</li>
+            <li>Tour haqida savollar</li>
+            <li>Bog'lanish usuli</li>
+            <li>Mavjud turlar</li>
           </ul>
         </div>
 
         <div>
-          <h4 className="footer-title">Подписывайтесь</h4>
+          <h4 className="footer-title">Ilovalar</h4>
           <ul className="footer-list">
             <li>Facebook</li>
             <li>Instagram</li>
@@ -36,10 +36,22 @@ export default function Footer() {
         </div>
 
         <div className="footer-copy">
-          © 2026 Tours
+          © 2026 IT TOUR
+           <h4 className="footer-title"></h4>
+  <div className="payment_icons">
+    <p>Visa</p>
+    <p>MasterCard</p>
+    <p>UzCard</p>
+    <p>Humo</p>
+    <p>Payme</p>
+    <p>Click</p>
+    
+  </div>
         </div>
+
 
       </div>
     </footer>
   );
 }
+

@@ -41,6 +41,7 @@ function Rec() {
         title={c.name}
         route={`/tickets/${c._id}`}
         tags="Ko'rish"
+        labelImage={c.labelImage}
       />
     ))}
       </div>
