@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const TextCard = ({ title, text, tags, route, image }) => {
   return (
     <div>
-      <div className="card"
+      <div className="carrd"
       style={{
         backgroundImage: "url('/view.jpg')",
         backgroundSize: "cover",

@@ -21,9 +21,6 @@ const Home = () => {
             <h1 data-aos="fade-up">Everything is open with IT TOUR</h1>
           </div>
         </section>
-        <section>
-          /card/
-        </section>
         <section className="simple_section">
           <h1 data-aos="fade-up">IT TOUR — bu qulaylik, ishonch va unutilmas sayohatlar demakdir. Biz sizga dunyoning eng go‘zal maskanlariga sifatli va hamyonbop sayohatlarni taklif qilamiz.</h1>
         </section>
@@ -75,7 +72,7 @@ Biz bilan qulay, ishonchli va unutilmas sayohatlarni kashf eting. </h2>
           <p>
           Maxsus takliflarimiz, yangi mahsulotlarimiz va eksklyuziv aksiyalarimiz haqida xabardor bo'lib turing va o'tkazib yubormang!.
           </p>
-          <button>
+          <button className='or'>
             O'rganish
           </button>
           </div>
