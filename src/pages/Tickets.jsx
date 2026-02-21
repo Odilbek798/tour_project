@@ -69,12 +69,13 @@ Kvebek, Trois-Rivières, Drummondville, Saint-Hyacinthe va Longueuil"/> */}
       <section className="connect1">
         <div className="connect" data-aos="fade-up">
           <h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Qo'shimcha ma'lumot o'rganmoqchi bo'lsangiz biz bilan bog'laning.
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione totam commodi quidem. Dignissimos, libero corporis odio eius minus ad..
+          Maxsus takliflarimiz, yangi mahsulotlarimiz va eksklyuziv aksiyalarimiz haqida xabardor bo'lib turing va o'tkazib yubormang!.
+            
           </p>
-          <button>
+          <button className='or'>
             O'rganish
           </button>
         </div>

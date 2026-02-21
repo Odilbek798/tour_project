@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Accordion from "../components/accordion2/Accordion2";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const TicketDetails = () => {
   const { id } = useParams();
@@ -13,7 +16,10 @@ const TicketDetails = () => {
       );
       setTour(res.data);
       console.log(res.data);
+<<<<<<< HEAD
       
+=======
+>>>>>>> 5909cafe30b51381811441122f646ba80a5c76de
     } catch (error) {
       console.log(error);
     }
@@ -23,81 +29,183 @@ const TicketDetails = () => {
     getTourById();
   }, [id]);
 
-  if (!tour) return <h2>Loading...</h2>;
+  if (!tour)
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-2xl text-gray-500 animate-pulse">Loading...</div>
+      </div>
+    );
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>{tour.name}</h1>
+    <div>
+  <div className="main_section" style={{
+    backgroundImage: `url(${tour.mainImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}>
+    <div className="head">
+      <Header/>
+    </div>
+        <div className="titlee">
+        <h1>{tour.title}</h1>
+        <p>{tour.continent} continent</p>
+      </div> 
 
-      <img
-        src={tour.image}
-        alt={tour.name}
-        style={{ width: "400px", borderRadius: "10px" }}
-      />
+  <div className="cardd lll">
+    <img src={tour.mainImage} alt="" />
+    <div className="text_s">
+    <div>
+      <p>{tour.durationDays} days</p>
+      <p>20 times food</p>
+      <p>Hotel</p>
+    </div>
+    <span className="line"></span>
+    <div>
+      <p>{tour.price} <span>{tour.currency}</span></p>
+    </div>
 
-      <p><strong>Description:</strong> {tour.description}</p>
-      <p><strong>Price:</strong> {tour.price} {tour.currency}</p>
-      <p><strong>Duration:</strong> {tour.durationDays} days</p>
-      <p><strong>Rating:</strong> {tour.rating}</p>
-      <p><strong>Reviews Count:</strong> {tour.reviewsCount}</p>
-      <p><strong>Discount:</strong> {tour.discount}%</p>
-      <p><strong>Best Season:</strong> {tour.bestSeason}</p>
-      <p><strong>Country Code:</strong> {tour.countryCode}</p>
-      <p><strong>Featured:</strong> {tour.isFeatured ? "Yes" : "No"}</p>
-      <p><strong>Active:</strong> {tour.isActive ? "Yes" : "No"}</p>
+    </div>
+  </div>
+    {/* <div className="cardd">
+      <h1>{tour.title}</h1>
+      <p>{tour.continent} • {tour.slug}</p>
+    </div> */}
+  </div>
 
-      <p><strong>Created At:</strong> {new Date(tour.createdAt).toLocaleString()}</p>
-      <p><strong>Updated At:</strong> {new Date(tour.updatedAt).toLocaleString()}</p>
+  {/* Badges */}
+  <div>
+    {tour.isFeatured && (
+      <button>⭐️ Featured</button>
+    )}
+    {tour.isActive && (
+      <button className="paddingss" > Active</button>
+    )}
+    {tour.tourTypes?.map((type, i) => (
+      <button className="paddings" key={i}>
+        {type}
+      </button>
+    ))}
+  </div>
 
-      <h3>Tags:</h3>
-      <ul>
-        {tour.tags.map((tag, index) => (
-          <li key={index}>{tag}</li>
-        ))}
-      </ul>
+  {/* Info Cards */}
+  
+  <div>
+    <Accordion/>
+  </div>
 
-      <h3>Tour Types:</h3>
-      <ul>
-        {tour.tourTypes.map((type, index) => (
-          <li key={index}>{type}</li>
-        ))}
-      </ul>
+  {/* Description */}
+  <div className="half">
+    <div className="imagge">
+      <img src="/africa.jpg" alt="" />
+    </div>
+    <div className="desc">
+      <h2>Description</h2>
+      <p>{tour.description}</p>
+    </div>
+  </div>
+  
+  <section className="half_image reverse"  >
+          <div className="img_side">
+            <img src="/half2.jpg" alt="" />
+          </div>
+          <div className="text_side">
+            <h1>Sayohatingiz maroqli bo'lsin</h1>
+            <p>Sayohatga sarflangan pul hech qachon behuda ketmaydi. Siz yangi bilim, kuch va ilhom bilan qaytasiz. Bu esa ishda, hayotda va munosabatlarda ijobiy o‘zgarishlarga olib keladi.
 
-      <h3>Available Countries:</h3>
-      <ul>
-        {tour.availableCountries.map((country, index) => (
-          <li key={index}>{country}</li>
-        ))}
-      </ul>
+Bugunoq sayohatingizni rejalashtiring — ertangi xotiralar bugundan boshlanadi 🌍✈️</p>
+            <button>Ko'proq organish</button>
+          </div>
+        </section>
 
-      <h3>Gallery:</h3>
-      <div style={{ display: "flex", gap: "10px" }}>
-        {tour.gallery.map((img, index) => (
-          <img key={index} src={img} alt="" width="100" />
+  {/* Tags */}
+  {tour.tags?.length > 0 && (
+    <div>
+      <h2>Tags</h2>
+      <div>
+        {tour.tags.map((tag, i) => (
+          <span key={i}>
+            #{tag}
+          </span>
         ))}
       </div>
+    </div>
+  )}
 
-      <h3>Reviews:</h3>
+  {/* Available Countries */}
+  {tour.availableCountries?.length > 0 && (
+    <div>
+      <h2>Available Countries</h2>
       <ul>
-        {tour.reviews.map((review, index) => (
-          <li key={index}>{review}</li>
-        ))}
-      </ul>
-
-      <h3>Bookings:</h3>
-      <ul>
-        {tour.bookings.map((booking, index) => (
-          <li key={index}>{booking}</li>
-        ))}
-      </ul>
-
-      <h3>Meta Keywords:</h3>
-      <ul>
-        {tour.metaKeywords.map((keyword, index) => (
-          <li key={index}>{keyword}</li>
+        {tour.availableCountries.map((country, i) => (
+          <li key={i}>{country}</li>
         ))}
       </ul>
     </div>
+  )}
+
+  {/* Meta Keywords */}
+  {tour.metaKeywords?.length > 0 && (
+    <div>
+      <h2>Meta Keywords</h2>
+      <div>
+        {tour.metaKeywords.map((kw, i) => (
+          <span key={i}>
+            {kw}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {/* Gallery */}
+  {tour.gallery?.length > 0 && (
+    <div>
+      <h2>Gallery</h2>
+      <div>
+        {tour.gallery.map((img, i) => (
+          <img
+            key={i}
+            src={img}
+            alt={`gallery-${i}`}
+          />
+        ))}
+      </div>
+    </div>
+  )}
+
+  {/* Reviews */}
+  {tour.reviews?.length > 0 && (
+    <div>
+      <h2>Reviews</h2>
+      <ul>
+        {tour.reviews.map((review, i) => (
+          <li key={i}>{review}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  {/* Bookings */}
+  {tour.bookings?.length > 0 && (
+    <div>
+      <h2>Bookings</h2>
+      <ul>
+        {tour.bookings.map((booking, i) => (
+          <li key={i}>{booking}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  {/* Footer Dates */}
+  <div>
+    <p>Created: {new Date(tour.createdAt).toLocaleString()}</p>
+    <p>Updated: {new Date(tour.updatedAt).toLocaleString()}</p>
+  </div>
+  <Footer/>
+</div>
+
   );
 };
 

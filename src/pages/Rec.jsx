@@ -3,6 +3,9 @@ import Cards from "../components/Cards/Cards";
 import TextCard from "../components/TextCard";
 import axios from 'axios';
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function Rec() {
   const [coutry, setCountry] = useState([])
@@ -15,10 +18,22 @@ function Rec() {
   useEffect(() => {
     getTours()
   }, [])
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, 
+      easing: 'ease-in-out', 
+      once: true,  
+    });
+  }, []);
   return(
     <div className="rec">
+      <div className="upp" data-aos="fade-down">
       <Header/>
-      <div className="cards">
+      </div>
+      <div className="big_title">
+        <h1 data-aos="fade-up">Recomendations</h1>
+      </div>
+      <div className="cards" data-aos="fade-up">
           {coutry.map((c) => (
       <TextCard
         key={c._id}
@@ -29,6 +44,7 @@ function Rec() {
       />
     ))}
       </div>
+      <Footer/>
     </div>
   );
   
