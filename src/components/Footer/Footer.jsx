@@ -46,6 +46,7 @@ export default function Footer() {
     <p>Payme</p>
     <p>Click</p>
     
+
   </div>
         </div>
 

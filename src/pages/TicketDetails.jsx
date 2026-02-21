@@ -16,6 +16,7 @@ const TicketDetails = () => {
       );
       setTour(res.data);
       console.log(res.data);
+
     } catch (error) {
       console.log(error);
     }
