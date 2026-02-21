@@ -12,6 +12,8 @@ const TicketDetails = () => {
         `https://backend-iobr.onrender.com/api/countries/${id}`
       );
       setTour(res.data);
+      console.log(res.data);
+      
     } catch (error) {
       console.log(error);
     }

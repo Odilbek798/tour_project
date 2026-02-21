@@ -3,20 +3,10 @@ import Header from '../components/Header/Header'
 import TextCard from '../components/TextCard'
 import Accordion from '../components/accordion/Accordion'
 import Footer from '../components/Footer/Footer'
-import axios from 'axios'
 
 function Tickets() {
 
-  const [coutry, setCountry] = useState([])
-
-  const getTours = async () => {
-    const res = await axios.get("https://backend-iobr.onrender.com/api/countries")
-    setCountry(res.data)
-  }
-
-  useEffect(() => {
-    getTours()
-  }, [])
+  
 
   return (
     <div className='tickets'>
@@ -34,15 +24,7 @@ function Tickets() {
       </section>
       <section className="text_cards">
 
-        {coutry.map((c) => (
-  <TextCard
-    key={c._id}
-    text={c.description}
-    title={c.name}
-    route={`/tickets/${c._id}`}
-    tags="Ko'rish"
-  />
-))}
+        
 
         {/* 
         <TextCard title="Mobil ilovamizni yuklab oling" text="App Store yoki Google Play Store’da mavjud.
