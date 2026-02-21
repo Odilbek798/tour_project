@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import "./accordion.css";
+import "./Accordion.css";
 
 const data = [
   {
